@@ -4,9 +4,17 @@ nav {
   }
   
   nav ul {
+    nav ul {
     list-style: none;
-    margin: 0;
+    margin:0;
+    text-align: center;
     padding: 0;
+    border: solid 2px;
+    border-radius: 5px;
+    color: #2D3E50;
+    font-family: 'Arial';
+    font-weight: bold;
+    height: 50px;
   }
   
   nav li {
