@@ -1,0 +1,21 @@
+img {
+	border: none;
+	display: block;
+}
+.bold{
+    font-weight: bold;
+}
+.italics{
+    font-style: italic;
+}
+.navigation{
+    width: 952px;
+    height: 50px;
+    background:#839860 url(images/nav2.jpg) no-repeat
+}
+.clearfloat {
+	zoom: 1;
+}
+.background{
+    background-color:rgb(182, 182, 126);
+}
