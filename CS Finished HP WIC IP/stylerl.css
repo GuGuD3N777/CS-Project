@@ -1,0 +1,61 @@
+nav {
+    background-color: #a1b6f0;
+    color: white;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin:0;
+    text-align: center;
+    padding: 0;
+    border: solid 2px;
+    border-radius: 5px;
+    color: #010911;
+    font-size: 20px ;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    font-weight: bold;
+    height: 50px;
+    line-height: 50px;
+  }
+  
+  nav li {
+    display: inline-block;
+    margin: 0 50px;
+  }
+  
+  nav a {
+    color: rgb(5, 28, 87);
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #f1f1f1;
+    color: black;
+    text-align: center;
+    padding: 20px;
+  }
+
+  
+  html {
+    height: 100%;
+  }
+  
+  body{
+    background-color: #dbe1ee;
+  }
+  main{
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+
+  
+  
+ 
+  
+  

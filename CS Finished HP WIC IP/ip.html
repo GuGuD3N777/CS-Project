@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Instructions Processing</title>
+	<link rel="stylesheet" type="text/css" href="styleip.css">
+	<style>
+		span { font-weight:bolder}
+		.questions {
+			color:blue}
+		.questions {font-style:italic
+			}
+		.processes {
+			font-weight:bolder;
+			font-style:Georgia;
+			color:forestgreen;
+		}
+	</style>
+
+
+	
+		
+</head>
+<body>
+	
+	<nav>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="What is CPU.html">What is CPU?</a></li>
+			<li><a href="mc.html">Main Components</a></li>
+			<li><a href="#">Instructions Processing</a></li>
+			<li><a href="ar.html">Architectures</a></li>
+			<li><a href="rl.html">Reference List</a></li>
+		</ul>
+	</nav>
+	<head>
+		<h1>How does CPU process instructions?</h1>
+	</head>
+	<img src="4steps.jpg">
+	<head>
+    <h1>1.Fetch</h1>
+	</head>
+    
+<main>
+    <p>The process of CPU fetching instructions is usually accomplished by the <span>memory controller, instruction register</span> and the <span>program counter</span>.
+        <br><br>
+         <li><span class="questions">What is the memory controller?</span></li>
+        <br>
+        A memory controller is a hardware component that controls the flow of data between the CPU and the system memory of a computer(RAM). While RAM contains all the data the CPU could need for the currently running processes, the memory controller is responsible for requesting the data the CPU wants from the RAM. It is the role of reading, writing and controlling data. It is a crucial component in computer systems because it contributes to making the process of transferring data between the CPU and RAM efficient and secure.
+        <br><br>
+        <li><span class="questions">What is the instruction register?</span></li>
+        <br>
+        The Instruction Register (IR) holds a machine instruction in the representation of binary nubmers that is currently being executed.
+        <br><br>
+        <li><span class="questions">What is the program counter?</span></li>
+        <br>
+        A Program Counter(PC) is a register in a computer processor that contains the address of the currently processing instruction. As one instruction is being fetched, the stored value would be increased by one by the program counter. After one instruction being fetched, the program counter points to the address of the next instruction in the sequence.
+        <br><br>
+        Here is the fetching process in the cpu ( related to the main components of the CPU) :
+        <br><br>
+        <table width="600" height="700" border="10" cellspacing="10" bordercolor="#808080">
+            <tr>
+                <td align ="center" valign="top"><p class="processes"></p>
+                    <p class="processes">Start fetching </p>
+                    <p class="processes">↓</p>
+                    <p class="processes">Read the instruction address from the Program Counter</p>
+                    <p class="processes">↓</p>
+                    <p class="processes">Send the address to the address bus</p>
+                    <p class="processes">↓</p>
+                    <p class="processes">The Memory Controller receives the address from the address bus</p>
+                    <p class="processes">↓</p>
+                    <p class="processes">The Memory Controller reads the instruction from the system memory (RAM)</p>
+                    <p class="processes">↓</p>
+                    <p class="processes">Load the instruction from the data bus into the Instruction Register</p>
+                    <p class="processes">↓</p>
+                    <p class="processes">The Program Counter add one to the stored value</p>
+                    <p class="processes">↓</p>
+                    <p class="processes">The Program Counter points to the next instruction</p>
+
+                </td>
+            </tr>
+        </table>
+    </p>
+</main>
+
+    <head>
+        <style>
+           span{
+            font-weight:bolder;
+            font-style: italic;
+            font-size: larger;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        </style>
+        <h1>2.Decode</h1>
+        <title>2.Decode</title>
+        
+    </head>
+<main>
+    <p>
+        The Decoding process allows the cpu to sort out different instructions to be accessed by the corresponding correct execution units.<br> A <span>decoder</span> is responsible for this process. Decoders are combinational circuits that convert binary into 2N-bit outputs.
+        <br>
+   <br><br>
+
+         <img src="Decoder.jpg" style="display: block; margin: auto;"/>
+         <br><br>
+         In this process, cpu determines its following behavior based on the form of the instruction. Instructions are divided into meaningful parts to be executed.
+        <br>
+        Decode often involves these following steps:
+        <ol>
+            <li><span>Parse opcode</span> : CPU parses the opcodes which are in the instruction into different corresponding operation categories. For example, arithmetic operation and logical operation.</li>
+            <li><span>Resolute register operand</span> : CPU needs to resolve the register number of the operand if it is involved in the instruction.</li>
+            <li><span>Resolute memory operand </span>: CPU needs to parse the memory address and read the corresponding data from the memory if the instruction contains memory operand.</li>
+            <li><span>Parse control flow </span>: CPU needs to parse the destination address of the flow instructions if the instruction contains control flow instructions, such as jump or branch.</li>
+        </ol>
+    </p>
+</main>
+    <head>
+        <style>
+           span{
+            font-style:italic;
+            color:blueviolet;
+            font-weight: bolder;
+        }
+           img{
+            vertical-align:middle;
+           }
+        </style>
+        <h1>3.Execute</h1>
+        <title>3.Execute</title>
+        
+    </head>
+<main>
+    <p>
+        The task in this process is to complete the various commands that instructions need, finally to utilize the function of instructions. During this process, different parts and units of cpu are linked together to execute to meet the demands. For example, if there is an instruction which calls for mathematics calculation, the arithmetic logic unit (ALU) would be then linked between an input and an output, where the input requires the values to be calculated, and the output would give the final calculated result.
+        <br><br>
+    <body>
+      <span> Von Neumann model:</span>
+        
+
+        <div>
+        <img src="Execute Process.jpg" style="display: block; margin: auto;">
+        </div>
+    <br>
+    </body>
+        
+        <span>It is worthy noting that there are a series of instructions being executed simultaneously inside the cpu, to ensure the efficiency of instruction processing. Modern cpus utilize a technique called pipelining, in which multiple instructions are divided into several stages, then to be executed at the same time.</span>
+    </p>
+</main>
+
+    <head>
+        <style>
+           span{font-weight:bolder}
+           div{font-style:italic}
+           table {border:2px solid green}
+           td{border:1px solid green}
+           th {
+            font-weight : bold;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-style: inherit;
+            color:grey;
+        }
+        </style>
+        <h1>4.Store</h1>
+        <title>4.Store</title>
+        
+    </head>
+<main>
+    <p>
+        During this stage, the cpu writes the result of an instruction back to memory or device.
+        <br><br>
+        CPU usually uses <span>Instruction Cache </span>and<span> Data Cache </span>to store instruction. When a cpu needs to execute an instruction, first, instruction cache would examine whether it is already involved in an instruction cache. If yes, cpu can directly read the instruction from the cache instead of from the main store, which increases the speed of reading instructions greatly. If not, cpu would read the instruction from the main store, as well as store it in the main store. Cache helps accelerate the instruction processing, and improve access efficiency. 
+        <br><br>
+        <div>
+        Difference between Instruction Cache and Data Cache:
+        </div>
+        <br>
+     <table><tr>
+        <th>Instruction Cache</th>
+        <td>Only provide read operation</td>
+        </tr>
+        <tr>
+        <th>Data Cache</th>
+        <td>Capable of performing both read and write operations</td>
+        </tr>
+      </table>
+        <br><br><br>
+        <img src="cache.jpg" style="display: block; margin: auto;">
+
+    </p>
+</main>
