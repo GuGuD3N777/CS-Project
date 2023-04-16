@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            span { font-weight:bolder}
+            .questions {
+                color:blue}
+            .questions {font-style:italic
+                }
+            .processes {
+                font-weight:bolder;
+                font-style:Georgia;
+                color:forestgreen;
+            }
+
+        </style>
+        <h1>1.Fetch</h1>
+        <title>1.Fetch</title>
+        
+    </head>
+<main>
+    <p>The process of CPU fetching instructions is usually accomplished by the <span>memory controller, instruction register</span> and the <span>program counter</span>.
+        <br><br>
+         <li><span class="questions">What is the memory controller?</span></li>
+        <br>
+        A memory controller is a hardware component that controls the flow of data between the CPU and the system memory of a computer(RAM). While RAM contains all the data the CPU could need for the currently running processes, the memory controller is responsible for requesting the data the CPU wants from the RAM. It is the role of reading, writing and controlling data. It is a crucial component in computer systems because it contributes to making the process of transferring data between the CPU and RAM efficient and secure.
+        <br><br>
+        <li><span class="questions">What is the instruction register?</span></li>
+        <br>
+        The Instruction Register (IR) holds a machine instruction in the representation of binary nubmers that is currently being executed.
+        <br><br>
+        <li><span class="questions">What is the program counter?</span></li>
+        <br>
+        A Program Counter(PC) is a register in a computer processor that contains the address of the currently processing instruction. As one instruction is being fetched, the stored value would be increased by one by the program counter. After one instruction being fetched, the program counter points to the address of the next instruction in the sequence.
+        <br><br>
+        Here is the fetching process in the cpu ( related to the main components of the CPU) :
+        <br><br>
+        <table width="600" height="700" border="10" cellspacing="10" bordercolor="#808080">
+            <tr>
+                <td align ="center" valign="top"><p class="processes"></p>
+                    <p class="processes">Start fetching </p>
+                    <p class="processes">↓</p>
+                    <p class="processes">Read the instruction address from the Program Counter</p>
+                    <p class="processes">↓</p>
+                    <p class="processes">Send the address to the address bus</p>
+                    <p class="processes">↓</p>
+                    <p class="processes">The Memory Controller receives the address from the address bus</p>
+                    <p class="processes">↓</p>
+                    <p class="processes">The Memory Controller reads the instruction from the system memory (RAM)</p>
+                    <p class="processes">↓</p>
+                    <p class="processes">Load the instruction from the data bus into the Instruction Register</p>
+                    <p class="processes">↓</p>
+                    <p class="processes">The Program Counter add one to the stored value</p>
+                    <p class="processes">↓</p>
+                    <p class="processes">The Program Counter points to the next instruction</p>
+
+                </td>
+            </tr>
+        </table>
+    </p>
+</main>
+</html>

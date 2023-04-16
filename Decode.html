@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+           span{
+            font-weight:bolder;
+            font-style: italic;
+            font-size: larger;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        </style>
+        <h1>2.Decode</h1>
+        <title>2.Decode</title>
+        
+    </head>
+<main>
+    <p>
+        The Decoding process allows the cpu to sort out different instructions to be accessed by the corresponding correct execution units.<br> A <span>decoder</span> is responsible for this process. Decoders are combinational circuits that convert binary into 2N-bit outputs.
+        <br>
+   <br><br>
+
+         <img src="Decoder.jpg"/>
+         <br><br>
+         In this process, cpu determines its following behavior based on the form of the instruction. Instructions are divided into meaningful parts to be executed.
+        <br>
+        Decode often involves these following steps:
+        <ol>
+            <li><span>Parse opcode</span> : CPU parses the opcodes which are in the instruction into different corresponding operation categories. For example, arithmetic operation and logical operation.</li>
+            <li><span>Resolute register operand</span> : CPU needs to resolve the register number of the operand if it is involved in the instruction.</li>
+            <li><span>Resolute memory operand </span>: CPU needs to parse the memory address and read the corresponding data from the memory if the instruction contains memory operand.</li>
+            <li><span>Parse control flow </span>: CPU needs to parse the destination address of the flow instructions if the instruction contains control flow instructions, such as jump or branch.</li>
+        </ol>
+    </p>
+</main>

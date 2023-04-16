@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+           span{font-weight:bolder}
+           div{font-style:italic}
+           table {border:2px solid green}
+           td{border:1px solid green}
+           th {
+            font-weight : bold;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-style: inherit;
+            color:grey;
+        }
+        </style>
+        <h1>4.Store</h1>
+        <title>4.Store</title>
+        
+    </head>
+<main>
+    <p>
+        During this stage, the cpu writes the result of an instruction back to memory or device.
+        <br><br>
+        CPU usually uses <span>Instruction Cache </span>and<span> Data Cache </span>to store instruction. When a cpu needs to execute an instruction, first, instruction cache would examine whether it is already involved in an instruction cache. If yes, cpu can directly read the instruction from the cache instead of from the main store, which increases the speed of reading instructions greatly. If not, cpu would read the instruction from the main store, as well as store it in the main store. Cache helps accelerate the instruction processing, and improve access efficiency. 
+        <br><br>
+        <div>
+        Difference between Instruction Cache and Data Cache:
+        </div>
+        <br>
+     <table><tr>
+        <th>Instruction Cache</th>
+        <td>Only provide read operation</td>
+        </tr>
+        <tr>
+        <th>Data Cache</th>
+        <td>Capable of performing both read and write operations</td>
+        </tr>
+      </table>
+        <br><br><br>
+        <img src="cache.jpg">
+
+    </p>
+</main>
