@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+           span{font-weight:bolder}
+           div{font-style:italic}
+           table {border:2px solid green}
+           td{border:1px solid green}
+           th {
+            font-weight : bold;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-style: inherit;
+            color:grey;
+        }
+        </style>
+        <h1>5. Architecture</h1>
+        <title>5. Architecture</title>
+        
+    </head>
+
+<main>
+    <p>
+        <h2>A general introduction to architectures</h2>
+
+        CPUs are instruction set processors (ISPs). They process instructions from a predefined instruction set, and the instruction thus defines a CPU’s characteristics. And all the programs running on the CPUs are also encoded in the instruction set. 
+        <br><br>
+        The predefined sets the CPUs are running on are often called instruction set architecture (ISA). The component executing the ISAs is called microarchitecture. It is the combined implementation of registers, memory, arithmetic logic units, multiplexers, and any other digital logic blocks. And all of these together make up a CPU.
+        <br><br>
+        ISA plays a very important role and acts as a contract between the software, hardware, program, and machine. By having ISA as a contract, software and hardware developers can work independently while ensuring their products will work properly. A program written in a specific ISA is thus guaranteed to work on any hardware manufactured in that ISA.
+        <br><br>
+        Besides acting as a contract, ISA also serves as a specification for microarchitecture designers. When designing new CPUs, the designers need to ensure the CPUs can perform all the instructions specified in the ISA and that it adheres to the other requirements of the ISA. This is important because existing software is written to work with a particular ISA. If the microarchitecture deviates from the ISA, it may not be able to execute that software correctly. 
+        <br><br>
+        Since the invention of computers, many IPAs have been created and used. These IPAs differ in how they specify operations and operands. Each ISA defines its own assembly language, which consists of a sequence of assembly instructions. ISAs have been categorized based on the number of operands that can be specified in each instruction, such as two-address or three-address architectures. Some early ISAs use an accumulator as an implicit operand, while others assume operands are stored in a stack structure. Modern ISAs typically assume operands are stored in a register file, and special instructions move operands between the register file and main memory.
+        <br><br>
+        Nowadays, there are two popular architectures on the market. They are called x86 and ARM. Below lies the introductions of the two.
+        <br><br>
+
+        <h3>X86:</h3>
+        The architecture of the Intel x86 processor is based on complex instruction set computer (CISC) design. Unlike having numerous general-purpose registers, the processor has a limited number of special-purpose registers. This leads to the prevalence of specialized and complicated instructions.
+        <br><br>
+        The origins of the x86 processor can be traced back to the Intel 8080 processor, an 8-bit processor. Many aspects of the x86 instruction set are influenced by the backward compatibility with the 8080 and its Zilog Z-80 variant.
+        <br><br>
+
+        <h3>ARM</h3>
+        The Arm architecture is a Reduced Instruction Set Computer (RISC) architecture with features of 
+        <br><br>
+        <ul>
+            <li>A large uniform register file.</li>
+            <br>
+            <li>A load/store architecture, where data-processing operations only operate on register contents, not directly on memory contents.</li>
+            <br>
+            <li>Simple addressing modes, with all load/store addresses determined from register contents and instruction fields only.</li>
+        </ul>
+        <br>
+        Since ARM licenses out its architecture, there are ARM-designed and third-party-designed processors on the market. And ARM specifies in their guidebook of the architecture, they define the “behavior of an abstract machine referred to as a processing element”. As long as implementations conform to this defined behavior, they can be considered Arm cores. For example, Apple, Samsung, Nvidia, and Qualcomm all have processors designed by themselves that can be defined as ARM.
+        <br>
+
+        <h2>Ways of processing instructions.</h2>
+        Due to the different natures of x86 (CISC) and ARM (RISC), they process instructions differently. 
+        <br><br>
+        An x86 processor has a large collection of instruction sets comparatively, and some of them are very specialized. This makes it take longer to execute. To solve the this, x86 reduces instruction sets in the programs because it is believed that hardware is always faster than software. However, x86 chips are relatively slower as compared to ARM but use fewer instruction sets. 
+        <br><br>
+        An x86 chip is characterized by its short code length, which requires very little RAM, but its complex instructions may take longer than a single clock cycle to execute. Less instruction is needed to write an application, and it provides easier programming in assembly language. x86 also supports complex data structures and easy compilation of high-level languages. It is composed of fewer registers and more addressing nodes, typically 5 to 20, and instructions can be larger than a single word. 
+        <br><br>
+        An ARM processor, on the other hand, is built to minimize the time needed to execute instructions by optimizing and reducing the number of instructions required. It is achieved by making each instruction cycle take only one clock cycle and having three parameters each cycle: fetch, decode, and execute. 
+        <br><br>
+        Moreover, ARM processors use pipelining techniques to execute multiple parts (or stages) of instructions to perform more efficiently, and the processors also use a large number of registers storing instructions and responding to the computer quickly while minimizing interaction with computer memory. The processors also support a simple addressing mode and fixed length of instruction for executing the pipeline; they also use LOAD and STORE instructions to access the memory location. Together with simple and limited instruction, they minimize the time needed for processing.
+        <br><br>
+        <br><br>
+        <a href="https://www.javatpoint.com/risc-vs-cisc" target="_blank"><img src="ARM vs x86.jpg" alt="ARM architecture (left) and x86 architecture (right). Image used courtesy of JavaTpoint"></a>
+
+        
+            ></a>
+
+
+    </p>
+</main>
